@@ -71,6 +71,7 @@ public class Gmail_Access
                                     attachFiles += fileName + ", ";
                                     System.out.println("Downloading: " + fileName);
                                     part.saveFile(saveDirectory + File.separator + fileName);
+                                    System.out.println("Downloaded!");
                                 }
                                 else
                                     continue;
@@ -78,6 +79,7 @@ public class Gmail_Access
                         }
                     }
                     //Marking email read
+                    System.out.println("Marking as read!");
                     email.setFlag(Flags.Flag.SEEN,true);
                 }
             inbox.close(true);
